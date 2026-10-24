@@ -49,10 +49,10 @@ modules:
     post-install:
       - install -Dm644 uk.org.greenend.chiark.sgtatham.puzzles.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
       - install -Dm644 icons/mosaic-128d24.png ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/uk.org.greenend.chiark.sgtatham.puzzles.png
-      - desktop-file-edit --set-icon=uk.org.greenend.chiark.sgtatham.puzzles uk.org.greenend.chiark.sgtatham.puzzles.mosaic.desktop
-      - desktop-file-edit --set-name="Simon Tatham's Puzzles" uk.org.greenend.chiark.sgtatham.puzzles.mosaic.desktop
-      - desktop-file-edit --set-comment="Portable puzzles collection" uk.org.greenend.chiark.sgtatham.puzzles.mosaic.desktop
       - install -Dm644 uk.org.greenend.chiark.sgtatham.puzzles.mosaic.desktop ${FLATPAK_DEST}/share/applications/uk.org.greenend.chiark.sgtatham.puzzles.desktop
+      - desktop-file-edit --set-icon=uk.org.greenend.chiark.sgtatham.puzzles ${FLATPAK_DEST}/share/applications/uk.org.greenend.chiark.sgtatham.puzzles.desktop
+      - desktop-file-edit --set-name="Simon Tatham's Puzzles" ${FLATPAK_DEST}/share/applications/uk.org.greenend.chiark.sgtatham.puzzles.desktop
+      - desktop-file-edit --set-comment="Portable puzzles collection" ${FLATPAK_DEST}/share/applications/uk.org.greenend.chiark.sgtatham.puzzles.desktop
     sources:
       - type: archive
         url: https://www.chiark.greenend.org.uk/~sgtatham/puzzles/puzzles-20260923.616da16.tar.gz
