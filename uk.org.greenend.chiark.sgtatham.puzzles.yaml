@@ -1,6 +1,6 @@
 app-id: uk.org.greenend.chiark.sgtatham.puzzles
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '26.08'
 sdk: org.freedesktop.Sdk
 command: mosaic
 finish-args:
@@ -37,8 +37,8 @@ modules:
       - --with-openjp2
     sources:
       - type: archive
-        url: https://github.com/ImageMagick/ImageMagick6/archive/6.9.13-21.tar.gz
-        sha256: 36a7205c73db9107acec5bb7594e3afbde3cc08a89f0a22a15eead387244fa05
+        url: https://github.com/ImageMagick/ImageMagick6/archive/6.9.13-59.tar.gz
+        sha256: 867f2194939459047475475f7c15413e46c529acb57f779080298901508cc4e3
     # We need it only for the build stage
     cleanup:
       - '*'
@@ -48,13 +48,14 @@ modules:
       - install -Dm644 uk.org.greenend.chiark.sgtatham.puzzles.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
       - install -Dm644 icons/mosaic-128d24.png ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/uk.org.greenend.chiark.sgtatham.puzzles.png
       - desktop-file-edit --set-icon=uk.org.greenend.chiark.sgtatham.puzzles uk.org.greenend.chiark.sgtatham.puzzles.mosaic.desktop
+      - desktop-file-edit --set-name="Simon Tatham's Puzzles" uk.org.greenend.chiark.sgtatham.puzzles.mosaic.desktop
+      - desktop-file-edit --set-comment="Portable puzzles collection" uk.org.greenend.chiark.sgtatham.puzzles.mosaic.desktop
       - install -Dm644 uk.org.greenend.chiark.sgtatham.puzzles.mosaic.desktop ${FLATPAK_DEST}/share/applications/uk.org.greenend.chiark.sgtatham.puzzles.desktop
     sources:
-      - type: git
-        url: https://git.tartarus.org/simon/puzzles.git
-        commit: 7fa03051562ee81e2a5371f8b3a6d0bb6e646aa0
+      - type: archive
+        url: https://www.chiark.greenend.org.uk/~sgtatham/puzzles/puzzles-20260923.616da16.tar.gz
+        sha256: cc419c8060b4e22be398aa03e30651fbce146eee510645c303fb6f5f1b77b78e
       - type: patch
         path: desktop.patch
       - type: file
         path: uk.org.greenend.chiark.sgtatham.puzzles.metainfo.xml
-
