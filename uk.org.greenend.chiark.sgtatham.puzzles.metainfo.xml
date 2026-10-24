@@ -8,7 +8,7 @@
   <developer id="uk.org.greenend.chiark.sgtatham">
   	<name>Simon Tatham</name>
   </developer>
-  <launchable type="desktop-id">uk.org.greenend.chiark.sgtatham.puzzles.desktop</launchable>
+  <launchable type="desktop-id">uk.org.greenend.chiark.sgtatham.puzzles.mosaic.desktop</launchable>
   <description>
     <p>Simon Tatham's Portable Puzzle Collection contains a number of popular puzzle games for a single player.  It currently consists of these games:.</p>
     <ul>
